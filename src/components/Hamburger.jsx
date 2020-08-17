@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import styled from "styled-components"
 import { NavLinks } from "./NavLinks"
 
@@ -6,7 +6,7 @@ const StyledBurger = styled.div`
     width: 2rem;
     height: 2rem;
     position: fixed;
-    top: 19px;
+    top: 8px;
     right: 20px;
     display: none;
 
@@ -19,7 +19,7 @@ const StyledBurger = styled.div`
     div {
         width: 2rem;
         height: 0.25rem;
-        background-color: ${({ open }) => open ? "#FFD201" : "#00BFA6"};
+        background-color: ${({ open }) => open ? "#3AB29E" : "#5B6E80"};
         border-radius: 10px;
         transform-origin: 1px;
         transition: all 0.3s linear;

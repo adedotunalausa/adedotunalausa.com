@@ -1,17 +1,20 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import Hamburger from "./Hamburger"
+import { animateScroll as Scroll } from "react-scroll"
 
 function Header(props) {
     return (
         <nav>
             <div className="nav-container">
-                <Link className="name-link" to={"/"}>
-                    <div className="logo-wrapper name-link">
-                        <span className="my-name">Adedotun</span>
-                        <span className="my-surname">Adedotun Alausa</span>
-                    </div>
-                </Link>
+                <div
+                    className="logo-wrapper"
+                    onClick={() => {
+                        Scroll.scrollToTop()
+                    }}
+                >
+                    <span className="my-name">Adedotun</span>
+                    <span className="my-surname">Adedotun Alausa</span>
+                </div>
                 <Hamburger />
             </div>
         </nav>

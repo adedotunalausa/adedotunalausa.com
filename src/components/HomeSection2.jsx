@@ -13,6 +13,7 @@ const HomeSection2 = () => {
                     Digital Products (Apps, Website, SaaS solutions) which are visually pleasing,
                     functional and easy to use
                 </p>
+                <p className="project-details">Click on each project for details</p>
                 <div className="projects-container">
                     <a href="https://continery.vercel.app/" target="_blank" rel="noopener noreferrer">
                         <div className="card">

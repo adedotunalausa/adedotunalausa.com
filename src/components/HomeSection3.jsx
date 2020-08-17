@@ -5,8 +5,8 @@ import BackEndImg from "./images/backend-img.svg"
 const HomeSection3 = () => {
     return (
         <div>
-            <div className="abilities">
-                <h2>Abilities</h2>
+            <div className="capabilities" id="capabilities">
+                <h2>Capabilities</h2>
                 <div className="second-section-container">
                     <div>
                         <img className="web-development-img fade-in" src={FrontEndImg} alt="frontend-img" />

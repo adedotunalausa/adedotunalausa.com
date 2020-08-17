@@ -1,7 +1,9 @@
 import React from 'react'
 import HeroImg1 from "./images/Adedotun2.png"
 import { motion } from "framer-motion"
-// import HeroImg2 from "./images/Adedotun1.png"
+import HeroImg2 from "./images/Adedotun1.png"
+import { useMediaQuery } from '@react-hook/media-query'
+import { Link } from "react-scroll"
 
 const pageVariants = {
     in: {
@@ -19,6 +21,7 @@ const pageTransition = {
 }
 
 const HomeSection1 = () => {
+    const matches = useMediaQuery('only screen and (min-width: 768px)')
 
     return (
         <div className="first-section">
@@ -38,10 +41,9 @@ const HomeSection1 = () => {
                         users, help businesses reach their goals and result
                         in an awesome user interaction
                     </motion.p>
-                    <a className="butn" href="#abilities">More about me</a>
+                    <Link className="butn" to="capabilities" smooth={true} duration={1000}>More about me</Link>
                 </div>
-                <img className="hero-img1" src={HeroImg1} alt="hero-img" />
-                {/* <img className="hero-img2" src={HeroImg2} alt="hero-img" /> */}
+                {matches ? (<img className="hero-img2" src={HeroImg2} alt="hero-img" />) : (<img className="hero-img1" src={HeroImg1} alt="hero-img" />)}
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
+import NavImg from "./images/nav_img.svg"
 
 const Ul = styled.ul`
     list-style: none;
@@ -10,10 +11,14 @@ const Ul = styled.ul`
 
     li {
         padding: 0.5rem 1.5rem;
-        margin-top: 0.5rem;
+        font-size: 1.2rem;
     }
 
     img {
+        display: none;
+    }
+
+    .nav-contact-details {
         display: none;
     }
 
@@ -22,31 +27,51 @@ const Ul = styled.ul`
         flex-flow: column nowrap;
         align-items: center;
         position: fixed;
-        top: 2.9rem;
+        top: 4.3rem;
         right: 0;
         height: 100vh;
         width: 100vw;
-        padding-top: 2rem;
-        z-index: -5;
+        padding-top: 3rem;
+        z-index: -15;
         transform: ${({ open }) => open ? "tranlateX(0)" : "translateX(100%)"};
         transition: transform 0.3s ease-in-out;
 
         li {
-        padding: 1rem 1.5rem;
-    }
+            padding: 0.6rem 1.5rem;
+        }
 
         img {
             display: flex;
         }
+
+        .nav-contact-details {
+            position: absolute;
+            bottom: 4rem;
+            background: #f6f5f5;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 1.1rem;
+            width: 100vw;
+            padding: 2rem 1rem;
+        }
     }   
 `;
 
-export const NavLinks= ({ open, setOpen }) => {
+export const NavLinks = ({ open, setOpen }) => {
     return (
-        <Ul open={open} className="navlinks">
-            <Link className="link navlink" to={"/"} onClick={() => setOpen(!open)}><li>Home</li></Link>
-            <Link className="link navlink" to={"/Journal"} onClick={() => setOpen(!open)}><li>Journal</li></Link>
-            <a className="link navlink contact" href="mailto:adedotunalausa@gmail.com" onClick={() => setOpen(!open)}><li>Contact</li></a>
-        </Ul>
+        <div>
+            <Ul open={open} className="navlinks">
+                <Link className="link navlink" to={"/"} onClick={() => setOpen(!open)}><li>Home</li></Link>
+                <Link className="link navlink" to={"/Journal"} onClick={() => setOpen(!open)}><li>Journal</li></Link>
+                <a className="link navlink contact" href="mailto:adedotunalausa@gmail.com" onClick={() => setOpen(!open)}><li>Contact</li></a>
+                <img className="nav-img" src={NavImg} alt="nav-img" />
+                <div className="nav-contact-details">
+                    <p className="currently-available">Currently available</p>
+                    <p>+234 813 964 9118</p>
+                    <p>adedotunalausa@gmail.com</p>
+                </div>
+            </Ul>
+        </div>
     )
 }

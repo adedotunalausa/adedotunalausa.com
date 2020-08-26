@@ -10,7 +10,7 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-body{
+body {
   color: #5B6E80;
   background-color: #fefefe;
   font-family: 'Josefin Sans', sans-serif;
@@ -43,37 +43,61 @@ ul {
 }
 
 /* Navbar */
+
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 15;
   background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06), 0 -1px 0 0 rgba(0, 0, 0, 0.08);
 }
+
 nav .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  padding: 1.2rem 1.5rem;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-wrapper img {
+  width: 2rem;
+  margin-right: 0.5rem;
 }
 
 .logo-wrapper span {
   color: #3A61E2;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
-}
-
-.logo-wrapper span:hover {
-  color: #3AB29E;
 }
 
 .my-surname {
   display: none;
 }
 
+.nav-img {
+  width: 10rem;
+  margin-top: 2rem;
+}
+
+.nav-contact-details p {
+  padding: 0.3rem;
+}
+
+.currently-available {
+  color: #3A61E2;
+  margin-bottom: 1rem;
+}
+
 /* Buttons */
+
 .butn {
   border-radius: 40px;
   padding: 0.7rem 1rem;
@@ -83,16 +107,17 @@ nav .nav-container {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  background-image: linear-gradient(150deg,#3A61E2,#3AB29E);
-  box-shadow: 0 2px 8px 0 rgba(0,34,255,.08), 0 2px 8px 0 rgba(0,11,80,.12);
+  background-image: linear-gradient(150deg, #3A61E2, #3AB29E);
+  box-shadow: 0 2px 8px 0 rgba(0, 34, 255, .08), 0 2px 8px 0 rgba(0, 11, 80, .12);
   cursor: pointer;
   transition: all 0.2s ease-in-out 0s;
 }
 
 .butn:hover, .contact:hover {
-  background-image: linear-gradient(120deg,#3AB29E, #3A61E2);
+  background-image: linear-gradient(120deg, #3AB29E, #3A61E2);
   transform: translateY(-5px);
-  box-shadow: 0 12px 20px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 
 .butn-tech {
@@ -100,20 +125,29 @@ nav .nav-container {
   cursor: text;
 }
 
-.contact {
-  border-radius: 40px;
-  /* text-align: center; */
+.link {
+  margin-bottom: 1.5rem;
   color: #5B6E80;
-  font-weight: 400;
-  /* box-sizing: border-box; */
-  border-style: solid;
-  border-width: 1px;
-  border-color: #3AB29E;
-  cursor: pointer;
   transition: all 0.3s ease-in-out 0s;
 }
 
+.link:hover {
+  color: #3AB29E;
+  transform: translateY(-5px);
+}
+
+.contact {
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 400;
+  background-image: linear-gradient(150deg, #3A61E2, #3AB29E);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+  margin-top: 1rem;
+}
+
 /* First Section */
+
 .first-section {
   padding: 8rem 1.5rem 0 1.5rem;
   text-align: center;
@@ -144,13 +178,14 @@ nav .nav-container {
   font-size: 1.25rem;
 }
 
-.first-section-container img{
+.first-section-container img {
   width: 20rem;
   margin-top: 1.5rem;
-  margin-bottom: 4rem ;
+  margin-bottom: 4rem;
 }
 
 /* Second Section */
+
 .second-section {
   background: hsl(221, 72%, 98%);
   text-align: center;
@@ -183,19 +218,17 @@ nav .nav-container {
 }
 
 .projects-container a {
-  transition: all 0.2s ease-in 0s;
   padding: 0;
   margin: 0;
 }
 
-.projects-container a:hover {
-  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.12);
+.projects-container a .card:hover {
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.12);
   transform: scale(1.05);
 }
 
 .card {
   position: relative;
-  /* z-index: 5; */
   background: #FFF;
   width: 20rem;
   height: 32rem;
@@ -203,6 +236,7 @@ nav .nav-container {
   padding-top: 0.5rem;
   border-radius: 8px;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in 0s;
 }
 
 .card-dark {
@@ -221,7 +255,7 @@ nav .nav-container {
 .card-heading h3 {
   font-size: 2rem;
   text-align: left;
-  padding-right:1rem;
+  padding-right: 1rem;
   margin-left: 2rem;
   line-height: 3rem;
 }
@@ -261,6 +295,7 @@ nav .nav-container {
 }
 
 /* Third Section */
+
 .capabilities {
   padding: 4.5rem 1.5rem 3.5rem 1.5rem;
   text-align: center;
@@ -293,6 +328,7 @@ nav .nav-container {
 }
 
 /* Fourth Section */
+
 .fourth-section {
   padding: 5rem 1rem 1.5rem;
   text-align: center;
@@ -327,7 +363,7 @@ nav .nav-container {
   height: 120px;
   margin: .5rem;
   border-radius: .5rem;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,.05), 0 0 3px 0 rgba(0,0,0,.1);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .05), 0 0 3px 0 rgba(0, 0, 0, .1);
 }
 
 .box-inner {
@@ -369,6 +405,7 @@ nav .nav-container {
 }
 
 /* Fifth Section */
+
 .fifth-section {
   padding: 4rem 1.5rem;
   text-align: center;
@@ -403,6 +440,7 @@ nav .nav-container {
 }
 
 /* Footer Section */
+
 .last-section {
   position: static;
   bottom: 0;
@@ -448,6 +486,7 @@ nav .nav-container {
 }
 
 /* Journal */
+
 .journal-page-content-wrapper {
   margin-top: 7rem;
   margin-bottom: 30rem;
@@ -456,7 +495,7 @@ nav .nav-container {
 }
 
 .startingContent-wrapper {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   text-align: center;
 }
 
@@ -470,16 +509,68 @@ nav .nav-container {
   line-height: 1.6rem;
 }
 
+.post-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  width: 19rem;
+  height: 8rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-link {
+  color: #5B6E80;
+}
+
+.postcard-img {
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  margin: 0.2rem 0 0.5rem 0;
+  color: #3AB29E;
+  opacity: 0.7;
+}
+
+.post-page {
+  margin-bottom: 60rem;
+  height: 100vh;
+}
+
+.post-img {
+  width: 70vw;
+  margin: 2rem auto;
+  display: block;
+}
+
+.post-title {
+  text-align: center;
+}
+
+.post-body {
+  white-space: pre-wrap;
+  text-align: justify;
+  line-height: 1.5rem;
+  margin-top: 2rem;
+}
+
 @media screen and (min-width: 640px) {
   /* Navbar */
   .my-surname {
     display: inline;
   }
-
   .my-name {
     display: none;
   }
-
   /* First Section */
   .brief-info {
     line-height: 1.5;
@@ -487,13 +578,11 @@ nav .nav-container {
     padding-left: 1.4rem;
     padding-right: 1.4rem;
   }
-
   /* Fifth Section */
   .contact1 h3 {
     font-size: 1.8rem;
     line-height: 1.4;
   }
-
   .contact1 p {
     font-size: 1.4rem;
     padding-left: 4rem;
@@ -506,6 +595,20 @@ nav .nav-container {
     max-width: 768px;
     margin: 0 auto;
   }
+  .link {
+    margin-bottom: 0;
+  }
+  .contact {
+    color: #5B6E80;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3AB29E;
+    background-image: none;
+    margin-top: 0;
+  }
+  .contact:hover {
+    color: #fff;
+  }
 
   /* Buttons */
   .butn {
@@ -513,39 +616,33 @@ nav .nav-container {
     margin: 0.75rem 0;
     font-size: 1rem;
   }
-
   .contact {
     margin-left: 3rem;
+    padding: 0.3rem 0;
   }
-
   /* First Section */
   .first-section {
     padding: 9.3rem 2rem 5rem 2rem;
     text-align: left;
   }
-
   .first-section-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
-
   .first-section-content {
     align-items: flex-start;
   }
-
   .first-section-content h1 {
     margin-bottom: 1rem;
     line-height: 1.25;
     font-size: 2.1rem;
   }
-
   .hello {
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
   }
-
   .brief-info {
     display: block;
     margin-bottom: 1.8rem;
@@ -555,95 +652,76 @@ nav .nav-container {
     padding-right: 0;
     padding-bottom: 1.5rem;
   }
-
   .first-section-container img {
     width: 20rem;
     margin: 0 0 2rem 0;
   }
-
   /* Second Section */
   .second-section {
     padding: 4.5rem 2rem 3.5rem 2rem;
   }
-
   .projects-container {
     margin-top: 2rem;
   }
-
   .card {
     width: 43rem;
     height: 46rem;
     margin: 3rem auto;
   }
-
   .card-haiyo, .card-simon {
     height: 52rem;
   }
-
   .card-img1 {
     margin: 5rem 0 2rem 1.2rem;
     width: 40rem;
   }
-
   .card-img2 {
     margin: 1rem 0 1rem 1.2rem;
     width: 38rem;
   }
-
   .capabilities {
     padding: 4rem 0;
   }
-
   .second-section-container {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
   }
-
   .second-section-container ul {
     text-align: center;
   }
-
   .second-section-container li {
     width: 12rem;
   }
-
   /* Fifth Section */
   .fifth-section {
     padding: 5rem 2rem;
   }
-
   .fifth-section-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2.5rem;
   }
-
   .contact1 {
     text-align: left;
   }
-
   .contact1 h3 {
     font-size: 2rem;
     line-height: 1.4;
   }
-
   .contact1 p {
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
     line-height: 1.5;
     padding-left: 0;
   }
-
   .contact2 {
     text-align: right;
   }
-
   .contact2 p {
     font-size: 1.5rem;
   }
-
   /* Last Section */
   .last-section-container {
     display: flex;
@@ -651,13 +729,22 @@ nav .nav-container {
     align-items: flex-start;
     margin-top: 2.5rem;
   }
-
   .social-media a {
     padding: 0 .5rem;
   }
-
   .footer-right {
     text-align: right;
+  }
+  .journal-page-content-wrapper {
+    margin-top: 10rem;
+  }
+  .post-img {
+    width: 30rem;
+  }
+  .post-body {
+    margin-top: 1rem;
+    line-height: 1.7rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -666,83 +753,66 @@ nav .nav-container {
     max-width: 920px;
     margin: 0 auto;
   }
-
   /* Navbar */
   nav {
     padding: 0 4.5rem 0 4.5rem;
   }
-
   .logo-wrapper span {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
-
   /* First Section */
   .first-section {
     padding-left: 4.5rem;
     padding-right: 4.5rem;
   }
-
   .first-section-content h1 {
     font-size: 2.2rem;
     padding-right: .5rem;
   }
-
   .hello {
     font-size: 1.5rem;
   }
-
   .brief-info {
     font-size: 1.5rem;
   }
-
   .first-section-content a {
     font-size: 1.2rem;
   }
-
   .first-section-content img {
     margin-right: 2rem;
   }
-
   /* Third Section */
   .capabilities {
     padding-left: 4.5rem;
     padding-right: 4.5rem;
   }
-
   .second-section-container li {
     width: 18rem;
   }
-
   /* Fourth Section */
   .fourth-section {
     padding-left: 4.5rem;
     padding-right: 4.5rem;
   }
-
   /* Fifth Section */
   .fifth-section {
     padding-left: 4.5rem;
     padding-right: 4.5rem;
   }
-
   .contact1 h3 {
     width: 28rem;
   }
-
   .contact1 p {
     width: 27rem;
   }
-
   .contact1 a {
     font-size: 1.2rem;
   }
-
   /* Last Section */
   .last-section {
     padding-left: 4.5rem;
     padding-right: 4.5rem;
   }
-
   .last-section-container {
     margin-top: 3.2rem;
   }
@@ -753,23 +823,19 @@ nav .nav-container {
   .second-section {
     padding: 4.5rem 4.5rem 3.5rem 4.5rem;
   }
-
   .projects-container {
     margin-top: 2rem;
     flex-direction: row;
   }
-
   .card {
     width: 25rem;
     height: 38rem;
     margin: 3rem auto;
   }
-
   .card-img1 {
     margin: 5rem 0 2rem 1.2rem;
     width: 23rem;
   }
-
   .card-img2 {
     margin: -1rem 0 1rem 1.2rem;
     width: 23rem;
@@ -781,31 +847,25 @@ nav .nav-container {
     max-width: 1100px;
     margin: 0 auto;
   }
-
   /* First Section */
   .first-section {
     padding-top: 10rem;
   }
-
   .brief-info {
     width: 39rem;
   }
-
   /* Second Section */
   .second-section {
     padding: 4.5rem 4.5rem 3.5rem 4.5rem;
   }
-
   .card {
     width: 31rem;
     height: 38rem;
     margin: 3rem auto;
   }
-
   .card-img1, .card-img2 {
     width: 27rem;
   }
-
   .last-section-container {
     margin-top: 3.2rem;
   }

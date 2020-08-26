@@ -486,11 +486,10 @@ nav .nav-container {
 }
 
 /* Journal */
-
 .journal-page-content-wrapper {
   margin-top: 7rem;
-  margin-bottom: 30rem;
-  padding: 0 2rem;
+  margin-bottom: 15rem;
+  padding: 0 2rem 4rem 2rem;
   height: 100vh;
 }
 
@@ -515,6 +514,7 @@ nav .nav-container {
   padding: 1rem;
   width: 19rem;
   height: 8rem;
+  margin: 0 auto;
   margin-bottom: 2rem;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -522,7 +522,7 @@ nav .nav-container {
 }
 
 .post-card:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 6px 15px 0 rgba(58, 97, 226, 0.1);
 }
 
 .post-link {
@@ -542,8 +542,9 @@ nav .nav-container {
 }
 
 .post-page {
-  margin-bottom: 60rem;
-  height: 100vh;
+  margin-top: 7rem;
+  padding: 0 2rem 4rem 2rem;
+  text-align: center;
 }
 
 .post-img {
@@ -561,6 +562,18 @@ nav .nav-container {
   text-align: justify;
   line-height: 1.5rem;
   margin-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.keep-reading-btn {
+  padding: 0.6rem 1.2rem;
+  color: #3A61E2;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.keep-reading-btn:hover {
+  color: #3AB29E;
+  transform: translateY(-5px);
 }
 
 @media screen and (min-width: 640px) {
@@ -598,17 +611,6 @@ nav .nav-container {
   .link {
     margin-bottom: 0;
   }
-  .contact {
-    color: #5B6E80;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #3AB29E;
-    background-image: none;
-    margin-top: 0;
-  }
-  .contact:hover {
-    color: #fff;
-  }
 
   /* Buttons */
   .butn {
@@ -616,10 +618,7 @@ nav .nav-container {
     margin: 0.75rem 0;
     font-size: 1rem;
   }
-  .contact {
-    margin-left: 3rem;
-    padding: 0.3rem 0;
-  }
+
   /* First Section */
   .first-section {
     padding: 9.3rem 2rem 5rem 2rem;
@@ -735,7 +734,7 @@ nav .nav-container {
   .footer-right {
     text-align: right;
   }
-  .journal-page-content-wrapper {
+  .journal-page-content-wrapper, .post-page {
     margin-top: 10rem;
   }
   .post-img {
@@ -760,6 +759,20 @@ nav .nav-container {
   .logo-wrapper span {
     font-size: 1.3rem;
   }
+  .contact {
+    color: #5B6E80;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3AB29E;
+    background-image: none;
+    margin-top: 0;
+    margin-left: 3rem;
+    padding: 0.3rem 0;
+  }
+  .contact:hover {
+    color: #fff;
+  }
+
   /* First Section */
   .first-section {
     padding-left: 4.5rem;

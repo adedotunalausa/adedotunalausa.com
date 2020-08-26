@@ -33,8 +33,9 @@ const Ul = styled.ul`
         width: 100vw;
         padding-top: 3rem;
         z-index: -15;
-        transform: ${({ open }) => open ? "tranlateX(0)" : "translateX(100%)"};
-        transition: transform 0.3s ease-in-out;
+        transform: ${({ open }) => open ? "tranlateX(60%)" : "translateX(100%)"};
+        opacity: ${({ open }) => open ? 1 : 0.6};
+        transition: transform 0.4s ease-in-out;
 
         li {
             padding: 0.6rem 1.5rem;
